@@ -16,7 +16,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <img src="assets/heart.png" style="height: auto; width: 4vw;" class="nav-link" href="/Home">
+        <a class="nav-link" href="/Home">
+          <img src="assets/heart.png" style="height: auto; width: 2vw;">
+        </a>
       </li>
       <li class="nav-item" [ngClass]="{'active': item === route}" *ngFor="let item of navbarItems">
         <a class="nav-link" href="{{item}}">{{item}}</a>
