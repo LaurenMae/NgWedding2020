@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  const navbarItems: Array<String> = [
+  readonly navbarItems: Array<String> = [
     'Our Story',
     'Hotels',
     'RSVP',
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
     'Food Menu'
   ];
 
-  const bridalParty: Array<String> = [
+  readonly bridalParty: Array<String> = [
     'Maid of Honour',
     'Best Man',
     'Bridesmaids',
@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
     'Masters of Ceremony'
   ];
 
-  const route: string = '';
+  route: string = '';
 
   constructor(location: Location, router: Router) {
     router.events.subscribe((val) => {
