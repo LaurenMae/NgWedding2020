@@ -13,12 +13,11 @@ export class NavbarComponent implements OnInit {
     'Hotels',
     'RSVP',
     'Gifts',
-    'Food Menu'
+    'Menu'
   ];
 
   readonly bridalParty: Array<String> = [
     'Maid of Honour',
-    'Best Man',
     'Bridesmaids',
     'Groomsmen',
     'Masters of Ceremony'

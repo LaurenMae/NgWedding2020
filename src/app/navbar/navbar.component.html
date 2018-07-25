@@ -24,11 +24,11 @@
         <a class="nav-link" href="{{item}}">{{item}}</a>
       </li>
       <li ngbDropdown class="nav-item dropdown">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Bridal Party <!-- TODO remove text -->
         </a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a *ngFor="let member of bridalParty" class="dropdown-item" href="#">{{member}}</a>
+          <a *ngFor="let member of bridalParty" class="dropdown-item" href="{{member}}">{{member}}</a>
         </div>
       </li>
     </ul>

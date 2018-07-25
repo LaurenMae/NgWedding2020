@@ -9,6 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GiftsComponent } from './gifts/gifts.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home.component';
+import { BridalPartyComponent } from './bridal-party/bridal-party.component';
+import { MaidOfHonourComponent } from './bridal-party/maid-of-honour/maid-of-honour.component';
+import { BridesmaidsComponent } from './bridal-party/bridesmaids/bridesmaids.component';
+import { GroomsmenComponent } from './bridal-party/groomsmen/groomsmen.component';
+import { MastersOfCeremonyComponent } from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
+import { MenuComponent } from './menu/menu.component';
+import { RsvpComponent } from './rsvp/rsvp.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,14 @@ import { HomeComponent } from './home.component';
     NavbarComponent,
     HotelsComponent,
     GiftsComponent,
-    HomeComponent
+    HomeComponent,
+    BridalPartyComponent,
+    MaidOfHonourComponent,
+    BridesmaidsComponent,
+    GroomsmenComponent,
+    MastersOfCeremonyComponent,
+    MenuComponent,
+    RsvpComponent
   ],
   imports: [
     BrowserModule,
