@@ -10,6 +10,7 @@ import {GroomsmenComponent} from './bridal-party/groomsmen/groomsmen.component';
 import {MastersOfCeremonyComponent} from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
 import {MenuComponent} from './menu/menu.component';
 import {RsvpComponent} from './rsvp/rsvp.component';
+import {OurStoryComponent} from './our-story/our-story.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -23,7 +24,9 @@ const routes: Routes = [
   { path: 'Masters of Ceremony', redirectTo: 'MastersOfCeremony', pathMatch: 'full' },
   { path: 'MastersOfCeremony', component: MastersOfCeremonyComponent },
   { path: 'Menu', component: MenuComponent },
-  { path: 'RSVP', component: RsvpComponent }
+  { path: 'RSVP', component: RsvpComponent },
+  { path: 'Our Story', redirectTo: 'OurStory', pathMatch: 'full' },
+  { path: 'OurStory', component: OurStoryComponent }
 ];
 
 @NgModule({
