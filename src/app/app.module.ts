@@ -16,6 +16,7 @@ import { GroomsmenComponent } from './bridal-party/groomsmen/groomsmen.component
 import { MastersOfCeremonyComponent } from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
 import { MenuComponent } from './menu/menu.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RsvpComponent } from './rsvp/rsvp.component';
     GroomsmenComponent,
     MastersOfCeremonyComponent,
     MenuComponent,
-    RsvpComponent
+    RsvpComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,
