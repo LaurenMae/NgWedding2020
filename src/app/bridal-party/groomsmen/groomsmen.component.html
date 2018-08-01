@@ -1,24 +1,5 @@
 <app-page-header header="* [Groomsmen] *" leftMargin="14.5vw"></app-page-header>
 
-<div style="width: 100%; display: flex;">
-  <div style="width: 24%; text-align: center;">
-    <img src="assets/Alex.jpg" style="width:95%; height: auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Alex Howells</h4>
-    <p>Friend of the Groom</p>
-  </div>
-  <div style="width: 24%; text-align: center;">
-    <img src="assets/Ellis.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Ellis Millard</h4>
-    <p>Friend of the Groom</p>
-  </div>
-  <div style="width: 24%; text-align: center;">
-    <img src="assets/Geraint.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Geraint Stone</h4>
-    <p>Friend of the Groom</p>
-  </div>
-  <div style="width: 24%; text-align: center;">
-    <img src="assets/Callum.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Callum Welfoot</h4>
-    <p>Friend of the Groom</p>
-  </div>
+<div class="flex-container">
+  <app-role *ngFor="let groomsman of groomsmen" [role]="groomsman"></app-role>
 </div>
