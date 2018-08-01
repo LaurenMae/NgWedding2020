@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "My Custom Font";
+  src: url('/assets/I Love Glitter.ttf') format("truetype");
+}
+
+p.customfont {
+  font-family: "My Custom Font";
+}

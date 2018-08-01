@@ -10,10 +10,9 @@ import { Location } from '@angular/common';
 export class NavbarComponent implements OnInit {
   readonly navbarItems: Array<String> = [
     'Our Story',
-    'Hotels',
     'RSVP',
-    'Gifts',
-    'Menu'
+    'Hotels',
+    'Gifts'
   ];
 
   readonly bridalParty: Array<String> = [
@@ -21,6 +20,13 @@ export class NavbarComponent implements OnInit {
     'Bridesmaids',
     'Groomsmen',
     'Masters of Ceremony'
+  ];
+
+  readonly theDay: Array<String> = [
+    'Order of Service',
+    'Menu',
+    'Directions',
+    'Parking'
   ];
 
   route: string = '';
