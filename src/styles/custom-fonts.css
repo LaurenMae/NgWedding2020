@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Page Content";
+  src: url('/assets/The Heart Maze Demo.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Header Content";
+  src: url('/assets/I Love Glitter.ttf') format("truetype");
+}
+
+.customfont_pageContent {
+  font-family: "Page Content";
+}
+
+.customfont_headerContent {
+  font-family: "Header Content";
+}
