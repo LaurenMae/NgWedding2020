@@ -1,30 +1,5 @@
 <app-page-header header="* [Local Hotels] *" leftMargin="14vw"></app-page-header>
 
-<div style="width: 100%; display: flex;">
-  <div style="width: 32%; text-align: center;">
-    <a href="http://www.llanerch-vineyard.co.uk/" target="_blank">
-      <img src="assets/Llanerch-3.jpg" style="width:95%; height: auto; border-radius: 50%; margin-bottom: 1%;">
-    </a>
-    <h4>Llanerch Vineyard</h4>
-    <p>5 minute taxi or 20 minute walk from the venue. </p>
-    <p>Please organise bookings individually.</p>
-  </div>
-  <div style="width: 32%; text-align: center;">
-    <a href="https://www.valeresort.com" target="_blank">
-      <img src="assets/theVale.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    </a>
-    <h4>The Vale Resort</h4>
-    <p>Recommended</p>
-    <p>Hensol Castle is in the grounds of the Vale Hotel</p>
-    <p>Free shuttle to and from the venue.</p>
-    <p>Contact bride and groom regarding booking.</p>
-  </div>
-  <div style="width: 32%; text-align: center;">
-    <a href="https://www.premierinn.com/gb/en/home.html" target="_blank">
-      <img src="assets/PremierInn.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    </a>
-    <h4>Llantrisant Premier Inn</h4>
-    <p>15 minute taxi ride from the venue. </p>
-    <p>Please organise bookings individually.</p>
-  </div>
+<div class="flex-container">
+  <app-role *ngFor="let hotel of hotels" [role]="hotel" [imageWidth]="hotel.imageWidth"></app-role>
 </div>

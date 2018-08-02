@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+// TODO rename this component to be more generic to lists
+
 interface Role {
   name: string;
   description: string;
