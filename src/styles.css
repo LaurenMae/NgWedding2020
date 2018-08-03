@@ -4,6 +4,7 @@
 @import url("/styles/login.css");
 @import url("/styles/custom-fonts.css");
 @import url("/styles/role.css");
+@import url("/styles/directions.css");
 
 .navbar-icon {
   height: auto;
