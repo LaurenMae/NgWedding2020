@@ -12,7 +12,6 @@ import {MenuComponent} from './the-big-day/menu/menu.component';
 import {RsvpComponent} from './rsvp/rsvp.component';
 import {OrderOfServiceComponent} from './the-big-day/order-of-service/order-of-service.component';
 import {DirectionsComponent} from './the-big-day/directions/directions.component';
-import {ParkingComponent} from './the-big-day/parking/parking.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -29,8 +28,7 @@ const routes: Routes = [
   { path: 'RSVP', component: RsvpComponent },
   { path: 'Order of Service', redirectTo: '/OrderOfService', pathMatch: 'full' },
   { path: 'OrderOfService', component: OrderOfServiceComponent },
-  { path: 'Directions', component: DirectionsComponent },
-  { path: 'Parking', component: ParkingComponent }
+  { path: 'Directions', component: DirectionsComponent }
 ];
 
 @NgModule({
