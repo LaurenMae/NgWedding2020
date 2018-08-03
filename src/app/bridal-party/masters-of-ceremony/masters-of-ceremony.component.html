@@ -1,5 +1,5 @@
 <app-page-header header="* [Masters of Ceremony] *" leftMargin="1.5vw"></app-page-header>
 
 <div class="flex-container margin-left__15">
-  <app-role *ngFor="let master of ceremonies" [role]="master" imageWidth="80%"></app-role>
+  <app-horizontal-list *ngFor="let master of ceremonies" [listItem]="master" imageWidth="80%"></app-horizontal-list>
 </div>

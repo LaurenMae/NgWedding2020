@@ -1,5 +1,5 @@
 <app-page-header header="* [Local Hotels] *" leftMargin="14vw"></app-page-header>
 
 <div class="flex-container">
-  <app-role *ngFor="let hotel of hotels" [role]="hotel" [imageWidth]="hotel.imageWidth"></app-role>
+  <app-horizontal-list *ngFor="let hotel of hotels" [listItem]="hotel" [imageWidth]="hotel.imageWidth"></app-horizontal-list>
 </div>

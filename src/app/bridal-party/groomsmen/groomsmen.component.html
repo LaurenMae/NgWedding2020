@@ -1,5 +1,5 @@
 <app-page-header header="* [Groomsmen] *" leftMargin="14.5vw"></app-page-header>
 
 <div class="flex-container">
-  <app-role *ngFor="let groomsman of groomsmen" [role]="groomsman"></app-role>
+  <app-horizontal-list *ngFor="let groomsman of groomsmen" [listItem]="groomsman"></app-horizontal-list>
 </div>
