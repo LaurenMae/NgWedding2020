@@ -1,14 +1,5 @@
 <app-page-header header="* [Masters of Ceremony] *" leftMargin="1.5vw"></app-page-header>
 
-<div style="width: 100%; display: flex; margin-left: 25%;">
-  <div style="width: 25%; text-align: center;">
-    <img src="assets/Scott.jpg" style="width:95%; height: auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Scott Carter</h4>
-    <p>Friend of the Groom</p>
-  </div>
-  <div style="width: 25%; text-align: center;">
-    <img src="assets/Richard.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Richard Bennett</h4>
-    <p>Friend of the Bride</p>
-  </div>
+<div class="flex-container margin-left__15">
+  <app-horizontal-list *ngFor="let master of ceremonies" [listItem]="master" imageWidth="80%"></app-horizontal-list>
 </div>

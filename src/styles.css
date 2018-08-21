@@ -1,4 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 
+<<<<<<< HEAD
 @import url("/styles/timeline.css");
+=======
+@import "~bootstrap/dist/css/bootstrap.css";
+>>>>>>> master
 @import url("/styles/page-header.css");
+@import url("/styles/login.css");
+@import url("/styles/custom-fonts.css");
+@import url("/styles/role.css");
+@import url("/styles/directions.css");
+
+.navbar-icon {
+  height: auto;
+  width: 2vw;
+}
+
+.cover-image-container {
+  text-align: center;
+}
+
+.cover-image {
+  width: 75vw;
+  height: auto;
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+}
+
+.centre {
+  text-align: center;
+}
+
+.margin-left__15 {
+  margin-left: 15vw;
+}
+
+.margin-left__18 {
+  margin-left: 18.5vw;
+}

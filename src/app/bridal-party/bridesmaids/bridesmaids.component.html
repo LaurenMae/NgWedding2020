@@ -1,19 +1,5 @@
 <app-page-header header="* [Bridesmaids] *" leftMargin="12.5vw"></app-page-header>
 
-<div style="width: 100%; display: flex;">
-  <div style="width: 32%; text-align: center;">
-    <img src="assets/Eleanor.jpg" style="width:95%; height: auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Eleanor Welsh</h4>
-    <p>Sister of the Bride</p>
-  </div>
-  <div style="width: 32%; text-align: center;">
-    <img src="assets/Kathryn.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Kathryn Welsh</h4>
-    <p>Sister of the Bride</p>
-  </div>
-  <div style="width: 32%; text-align: center;">
-    <img src="assets/Emily.jpg" style="width:95%; height:auto; border-radius: 50%; margin-bottom: 1%;">
-    <h4 class="customfont" style="font-size: 3vw;">Emily Morris</h4>
-    <p>Sister of the Groom</p>
-  </div>
+<div class="flex-container">
+  <app-horizontal-list *ngFor="let bridesmaid of bridesmaids" [listItem]="bridesmaid" imageWidth="80%"></app-horizontal-list>
 </div>

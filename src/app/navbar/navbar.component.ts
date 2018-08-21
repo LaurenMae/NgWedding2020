@@ -25,11 +25,10 @@ export class NavbarComponent implements OnInit {
   readonly theDay: Array<String> = [
     'Order of Service',
     'Menu',
-    'Directions',
-    'Parking'
+    'Directions & Parking'
   ];
 
-  route: string = '';
+  route = '';
 
   constructor(location: Location, router: Router) {
     router.events.subscribe((val) => {

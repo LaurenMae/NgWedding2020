@@ -1,0 +1,19 @@
+.map-container {
+  width: 39%;
+  margin-right: 1%;
+  text-align: center;
+}
+
+.map {
+  width: 90%;
+  height: auto;
+}
+
+.directions-container {
+  width: 58%;
+  margin-right: 2%
+}
+
+.directions-container span {
+  font-weight: bold;
+}

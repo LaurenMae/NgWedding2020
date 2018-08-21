@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BridalPartyComponent } from './bridal-party.component';
+import { HorizontalListComponent } from './horizontal-list.component';
 
-describe('BridalPartyComponent', () => {
-  let component: BridalPartyComponent;
-  let fixture: ComponentFixture<BridalPartyComponent>;
+describe('RoleComponent', () => {
+  let component: HorizontalListComponent;
+  let fixture: ComponentFixture<HorizontalListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BridalPartyComponent ]
+      declarations: [ HorizontalListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BridalPartyComponent);
+    fixture = TestBed.createComponent(HorizontalListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

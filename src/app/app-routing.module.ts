@@ -8,9 +8,15 @@ import {BridesmaidsComponent} from './bridal-party/bridesmaids/bridesmaids.compo
 import {MaidOfHonourComponent} from './bridal-party/maid-of-honour/maid-of-honour.component';
 import {GroomsmenComponent} from './bridal-party/groomsmen/groomsmen.component';
 import {MastersOfCeremonyComponent} from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
-import {MenuComponent} from './menu/menu.component';
+import {MenuComponent} from './the-big-day/menu/menu.component';
 import {RsvpComponent} from './rsvp/rsvp.component';
+<<<<<<< HEAD
 import {OurStoryComponent} from './our-story/our-story.component';
+=======
+import {OrderOfServiceComponent} from './the-big-day/order-of-service/order-of-service.component';
+import {DirectionsComponent} from './the-big-day/directions/directions.component';
+import {ParkingComponent} from './the-big-day/parking/parking.component';
+>>>>>>> master
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -25,8 +31,15 @@ const routes: Routes = [
   { path: 'MastersOfCeremony', component: MastersOfCeremonyComponent },
   { path: 'Menu', component: MenuComponent },
   { path: 'RSVP', component: RsvpComponent },
+<<<<<<< HEAD
   { path: 'Our Story', redirectTo: 'OurStory', pathMatch: 'full' },
   { path: 'OurStory', component: OurStoryComponent }
+=======
+  { path: 'Order of Service', redirectTo: '/OrderOfService', pathMatch: 'full' },
+  { path: 'OrderOfService', component: OrderOfServiceComponent },
+  { path: 'Directions', component: DirectionsComponent },
+  { path: 'Parking', component: ParkingComponent }
+>>>>>>> master
 ];
 
 @NgModule({
