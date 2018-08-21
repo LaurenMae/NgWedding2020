@@ -15,13 +15,14 @@ import { GroomsmenComponent } from './bridal-party/groomsmen/groomsmen.component
 import { MastersOfCeremonyComponent } from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
 import { MenuComponent } from './the-big-day/menu/menu.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
-import {OurStoryComponent} from './our-story/our-story.component';
+import { OurStoryComponent } from './our-story/our-story.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { LoginComponent } from './login/login.component';
 import { HorizontalListComponent } from './horizontal-list/horizontal-list.component';
 import { OrderOfServiceComponent } from './the-big-day/order-of-service/order-of-service.component';
 import { DirectionsComponent } from './the-big-day/directions/directions.component';
 import { ParkingComponent } from './the-big-day/parking/parking.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ParkingComponent } from './the-big-day/parking/parking.component';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
+    MatIconModule,
     AppRoutingModule
   ],
   providers: [],
