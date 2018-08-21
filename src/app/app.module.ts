@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { HorizontalListComponent } from './horizontal-list/horizontal-list.component';
 import { OrderOfServiceComponent } from './the-big-day/order-of-service/order-of-service.component';
 import { DirectionsComponent } from './the-big-day/directions/directions.component';
+import { ParkingComponent } from './the-big-day/parking/parking.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DirectionsComponent } from './the-big-day/directions/directions.compone
     LoginComponent,
     HorizontalListComponent,
     OrderOfServiceComponent,
-    DirectionsComponent
+    DirectionsComponent,
+    ParkingComponent
   ],
   imports: [
     BrowserModule,
