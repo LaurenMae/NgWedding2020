@@ -24,6 +24,8 @@ import { DirectionsComponent } from './the-big-day/directions/directions.compone
 import { ParkingComponent } from './the-big-day/parking/parking.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { LoginService } from './login.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
