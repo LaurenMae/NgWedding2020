@@ -1,10 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-<<<<<<< HEAD
 @import url("/styles/timeline.css");
-=======
 @import "~bootstrap/dist/css/bootstrap.css";
->>>>>>> master
 @import url("/styles/page-header.css");
 @import url("/styles/login.css");
 @import url("/styles/custom-fonts.css");

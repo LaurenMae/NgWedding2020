@@ -36,17 +36,13 @@ import { ParkingComponent } from './the-big-day/parking/parking.component';
     MastersOfCeremonyComponent,
     MenuComponent,
     RsvpComponent,
-<<<<<<< HEAD
     OurStoryComponent,
-    PageHeaderComponent
-=======
     PageHeaderComponent,
     LoginComponent,
     HorizontalListComponent,
     OrderOfServiceComponent,
     DirectionsComponent,
     ParkingComponent
->>>>>>> master
   ],
   imports: [
     BrowserModule,
