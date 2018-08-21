@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.timeline ol {
+  padding: 50px 0;
+  transition: all 1s;
+  width: 90%;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 180px;
+  height: 3px;
+  background: #dfdfdf;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  background-color: #f8f8f8;
+  /*background: #F45B69;*/
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: 85%;
+  display: table;
+  color: black;
+  background: white;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li div {
+  top: -35px;
+}
+
+.timeline ol li:nth-child(even) div::before {
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline .arrows {
+  margin-top: 27px;
+}
+
+.timeline .arrows button {
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  line-height: 50%;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: .5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+/* EVENTS
+-------------------------------------------------- */
+.event_section {
+  display: flex;
+}
+
+.event_detail {
+  width: 39%;
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 1%;
+}
+
+.event_image {
+  width: 39%;
+  float: right;
+  margin-right: 10%;
+  margin-left: 1%;
+}

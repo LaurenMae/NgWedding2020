@@ -1,0 +1,35 @@
+<app-page-header header="* [Our Story] *" leftMargin="17vw"></app-page-header>
+
+<section class="timeline">
+  <div class="arrows">
+    <button type="button" class="btn btn-default arrow arrow__prev" (click)="scroll('left')" aria-label="Left Align">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </button>
+  </div>
+  <div id="timeline_viewable_area" style="overflow-x: hidden;">
+    <ol id="timeline_view">
+      <li *ngFor="let event of getEvents()" (click)="viewEvent(event)" id="{{ event.listItem }}">
+        <div>
+          <a>{{ event.listItem }}</a>
+        </div>
+      </li>
+      <li id="last_timeline_event"></li>
+    </ol>
+  </div>
+  <div class="arrows" style="margin-left: 2%;">
+    <button type="button" class="btn btn-default arrow arrow__next" (click)="scroll('right')" aria-label="Left Align">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </button>
+  </div>
+</section>
+
+<!--Days until Wedding {{weddingCountDown}} TODO put this somewhere else-->
+<section class="event_section" *ngIf="selectedEvent">
+  <div class="event_detail">
+    <h4>{{ selectedEvent.date }}</h4>
+    {{ selectedEvent.detail }}
+  </div>
+  <div class="event_image">
+    <img src="">
+  </div>
+</section>
