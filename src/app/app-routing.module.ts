@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import {GiftsComponent} from './gifts/gifts.component';
 import {HotelsComponent} from './hotels/hotels.component';
 import {HomeComponent} from './home.component';
@@ -10,10 +9,12 @@ import {GroomsmenComponent} from './bridal-party/groomsmen/groomsmen.component';
 import {MastersOfCeremonyComponent} from './bridal-party/masters-of-ceremony/masters-of-ceremony.component';
 import {MenuComponent} from './the-big-day/menu/menu.component';
 import {RsvpComponent} from './rsvp/rsvp.component';
+import {ResponseComponent} from './rsvp/response/response.component';
 import {OurStoryComponent} from './our-story/our-story.component';
 import {OrderOfServiceComponent} from './the-big-day/order-of-service/order-of-service.component';
 import {DirectionsComponent} from './the-big-day/directions/directions.component';
 import {ParkingComponent} from './the-big-day/parking/parking.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'MastersOfCeremony', component: MastersOfCeremonyComponent },
   { path: 'Menu', component: MenuComponent },
   { path: 'RSVP', component: RsvpComponent },
+  { path: 'RSVP/:invitationId', component: ResponseComponent },
   { path: 'Our Story', redirectTo: 'OurStory', pathMatch: 'full' },
   { path: 'OurStory', component: OurStoryComponent },
   { path: 'Order of Service', redirectTo: '/OrderOfService', pathMatch: 'full' },
@@ -40,7 +42,7 @@ const routes: Routes = [
   exports: [ RouterModule ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes)
   ],
   declarations: []
 })

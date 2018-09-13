@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HotelsComponent } from './hotels/hotels.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GiftsComponent } from './gifts/gifts.component';
@@ -25,6 +27,10 @@ import { ParkingComponent } from './the-big-day/parking/parking.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import { LoginService } from './login.service';
+import { ResponseComponent } from './rsvp/response/response.component';
+
+import { CapitalisePipe } from './capitalise.pipe';
+import { KeysPipe } from './keys.pipe';
 
 @NgModule({
   declarations: [
@@ -45,15 +51,21 @@ import { LoginService } from './login.service';
     HorizontalListComponent,
     OrderOfServiceComponent,
     DirectionsComponent,
-    ParkingComponent
+    ParkingComponent,
+    ResponseComponent,
+    CapitalisePipe,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule.forRoot(),
     MatIconModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

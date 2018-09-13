@@ -1,0 +1,42 @@
+<app-page-header header="* [RSVP] *" leftMargin="24vw"></app-page-header>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)" *ngFor="let form of profileForms"> 
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <br>
+
+  <label>
+    RSVP:
+    <input type="text" formControlName="RSVP">
+  </label>
+
+  <br>
+
+  <label>
+    Dietary Requirements:
+    <input type="text" formControlName="dietaryRequirements">
+  </label>
+
+  <br>
+  
+  <label>
+    Food Allergies:
+    <input type="text" formControlName="foodAllergies">
+  </label>
+
+<br>
+  
+  <label>
+    Song Request:
+    <input type="text" formControlName="songRequest">
+  </label>
+
+<br>
+  
+  <button type="submit">Submit</button>
+
+</form>
+  
