@@ -10,14 +10,17 @@
 
   <label>
     RSVP:
-    <input type="text" formControlName="RSVP">
+    <input type="radio" value="attending" name="RSVP" formControlName="RSVP">Attending
+    <input type="radio" value="not attending" name="RSVP" formControlName="RSVP">Not Attending
   </label>
 
   <br>
 
   <label>
     Dietary Requirements:
-    <input type="text" formControlName="dietaryRequirements">
+    <input type="radio" value="vegan" name="dietaryRequirements" formControlName="dietaryRequirements">Vegan
+    <input type="radio" value="vegetarian" name="dietaryRequirements" formControlName="dietaryRequirements">Vegetarian
+    <input type="radio" value="other" name="dietaryRequirements" formControlName="dietaryRequirements">Other
   </label>
 
   <br>
@@ -36,7 +39,7 @@
 
 <br>
   
-  <button type="submit">Submit</button>
 
 </form>
   
+<button type="submit">Submit</button>
