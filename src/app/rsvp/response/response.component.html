@@ -1,45 +1,37 @@
-<app-page-header header="* [RSVP] *" leftMargin="24vw"></app-page-header>
+<div style="width: 50%; text-align: center; margin-left: 25%; margin-bottom: 2%;">
+  <form [formGroup]="getForm(user)" (ngSubmit)="onSubmit()" id="form" *ngFor="let user of users" 
+        style="margin-top: 2%; margin-bottom: 2%; border-bottom: 1px solid grey;"> 
+    <p *ngIf="user.name">
+      <label class="customfont_inviteFont" style="font-size: 4em;">{{user.name}}</label><br>
+      <input type="radio" value="attending" name="RSVP" formControlName="RSVP"> Attending
+      <input type="radio" value="not attending" name="RSVP" formControlName="RSVP"> Not Attending
+    </p>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit(form)" *ngFor="let form of profileForms"> 
-  <label>
-    Name:
-    <input type="text" formControlName="name">
-  </label>
+    <p *ngIf="!user.name">
+      <span class="customfont_inviteFont" style="font-size: 4em;">Guest</span><br>
+      <label>Name: </label>
+      <input type="text" name="name" formControlName="name"><br>
+      <input type="radio" value="attending" name="RSVP" formControlName="RSVP"> Attending
+      <input type="radio" value="not attending" name="RSVP" formControlName="RSVP"> Not Attending
+    </p>
 
-  <br>
+    <p>
+      <label>Dietary Requirements:</label><br>
+      <input type="radio" value="vegan" name="dietaryRequirements" formControlName="dietaryRequirements"> Vegan
+      <input type="radio" value="vegetarian" name="dietaryRequirements" formControlName="dietaryRequirements"> Vegetarian
+    </p>
+    
+    <p>
+      <label for="foodAllergies">Food Allergies:</label><br>
+      <textarea cols="30" rows="2" formControlName="foodAllergies" id="foodAllergies"></textarea>
+    </p>
+    
+    <p>
+      <label for="songRequest">Song Request:</label><br>
+      <textarea cols="30" rows="2" formControlName="songRequest" id="songRequest"></textarea>
+    </p>
 
-  <label>
-    RSVP:
-    <input type="radio" value="attending" name="RSVP" formControlName="RSVP">Attending
-    <input type="radio" value="not attending" name="RSVP" formControlName="RSVP">Not Attending
-  </label>
+  </form>
 
-  <br>
-
-  <label>
-    Dietary Requirements:
-    <input type="radio" value="vegan" name="dietaryRequirements" formControlName="dietaryRequirements">Vegan
-    <input type="radio" value="vegetarian" name="dietaryRequirements" formControlName="dietaryRequirements">Vegetarian
-    <input type="radio" value="other" name="dietaryRequirements" formControlName="dietaryRequirements">Other
-  </label>
-
-  <br>
-  
-  <label>
-    Food Allergies:
-    <input type="text" formControlName="foodAllergies">
-  </label>
-
-<br>
-  
-  <label>
-    Song Request:
-    <input type="text" formControlName="songRequest">
-  </label>
-
-<br>
-  
-
-</form>
-  
-<button type="submit">Submit</button>
+  <button type="submit" form="form" class="btn btn-primary">Save</button>
+</div>

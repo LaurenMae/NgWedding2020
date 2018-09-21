@@ -8,10 +8,19 @@
   src: url('/assets/I Love Glitter.ttf') format("truetype");
 }
 
+@font-face {
+  font-family: "Invite Font";
+  src: url('/assets/great-vibes.regular.ttf') format("truetype");
+}
+
 .customfont_pageContent {
   font-family: "Page Content";
 }
 
 .customfont_headerContent {
   font-family: "Header Content";
+}
+
+.customfont_inviteFont {
+  font-family: "Invite Font";
 }

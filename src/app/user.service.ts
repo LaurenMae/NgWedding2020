@@ -10,6 +10,7 @@ interface User {
   dietaryRequirements: DietaryRequirements;
   foodAllergies: string;
   songRequest: string;
+  guest?: boolean;
 }
 
 interface DietaryRequirements {
@@ -36,7 +37,7 @@ export class UserService {
     return this.http.get('/user/' + invitationId);
   }
 
-  sendRsvp(invitationId: string, body: Array<FormGroup>, options: Object): Observable<Object> {
+sendRsvp(invitationId: string, body: Array<FormGroup>, options: Object): Observable<Object> {
     return this.http.post('/sendrsvp/' + invitationId, body, options);
   }
 }

@@ -68,16 +68,23 @@ app.get('/user/:invitationId', (req, res) => {
 app.post('/sendrsvp/:invitationId', (req, res) => {
   mailOptions.text = JSON.stringify(req.body);
   
-  async.eachSeries(req.body, (user, next) => {
-    let newvalues = { $set: user };
-    let query = {'invitationId': req.params.invitationId, name: user.name};
+  async.eachSeries(req.body, (values, next) => {
+    let newvalues = { $set: values };
+    let query = { 
+      invitationId: values.invitationId, 
+      name: { 
+        $where: function() {
+          return this.name === values.name || this.name === '';
+        }
+      } 
+    }; 
 
-    updateUser(query, newvalues, next); // todo return promise
+    updateUser(query, newvalues, next);
   }, (err) => {
     if (err) {
-      res.send({test: 'ERROR request to the homepage'}); // todo
+      res.send(err); // todo
     } else {
-      res.send({test: 'Sent email'}); // todo
+      res.send(); // todo
     }
   });
 });

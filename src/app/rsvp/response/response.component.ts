@@ -3,7 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpHeaders } from '@angular/common/http';
+import { ObjectId } from 'mongodb';
+import { catchError, tap } from 'rxjs/operators';
 import * as _ from 'lodash';
+import { TextAttribute } from '@angular/compiler/src/render3/r3_ast';
 
 interface User {
   invitationId: string;
@@ -53,15 +56,33 @@ export class ResponseComponent implements OnInit {
 
   createProfileForm(user: User): void {
     this.profileForms.push(new FormGroup({
-      name: new FormControl(user.name),
-      RSVP: new FormControl(user.RSVP),
-      dietaryRequirements: new FormControl(user.dietaryRequirements),
-      foodAllergies: new FormControl(user.foodAllergies),
-      songRequest: new FormControl(user.songRequest)
+      name: user.name ? new FormControl(user.name) : new FormControl(''),
+      RSVP: user.RSVP ? new FormControl(user.RSVP) : new FormControl(''),
+      dietaryRequirements: user.dietaryRequirements ? new FormControl(user.dietaryRequirements) : new FormControl(''),
+      foodAllergies: user.foodAllergies ? new FormControl(user.foodAllergies) : new FormControl(''),
+      songRequest: user.songRequest ? new FormControl(user.songRequest) : new FormControl(''),
+      guest: user.name ? new FormControl(false) : new FormControl(true)
     }));
   }
 
+  getForm(user): FormGroup {
+    var form: FormGroup = _.find(this.profileForms, function(form: FormGroup) {
+      return form.controls.name.value === user.name;
+    });
+
+    if (form) {
+      return form;
+    }
+
+    return _.find(this.profileForms, function(form: FormGroup) {
+      return form.controls.guest && form.controls.guest.value === true;
+    });
+    
+  }
+
   onSubmit() {
+    // TODO - disable button and load spinner
+
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
@@ -70,11 +91,18 @@ export class ResponseComponent implements OnInit {
     };
 
     let formData = _.map(this.profileForms, 'value');
-    console.log(formData);
-    // todo - write to DB
 
-    this.userService.sendRsvp(this.invitationId, formData, httpOptions).subscribe((profileForms: Array<FormGroup>) => {
-      console.log(profileForms);
-    });
+    console.log(formData);
+
+    this.userService.sendRsvp(this.invitationId, formData, httpOptions)
+                    .subscribe((err: Error) => {
+                      if(err) {
+                        throw new Error(err.message);
+                      } else {
+                        alert("RSVP successfully saved");
+                      }
+                    }); // TODO - handle error in saving
   }
+
+  // TODO - handle leaving the page before saving
 }
